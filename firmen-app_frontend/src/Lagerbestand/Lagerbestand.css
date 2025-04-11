@@ -1,0 +1,153 @@
+/* Einheitliches Box-Modell für alle Elemente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Einheitliches Box-Modell */
+}
+
+/* Allgemeine Stile */
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1e6b4;
+  display: flex;
+  justify-content: center; /* Zentriert den Inhalt horizontal */
+  align-items: flex-start; /* Platziert den Inhalt oben auf der Seite */
+  min-height: 100vh;       /* Stellt sicher, dass der Inhalt den gesamten Bildschirm ausfüllt */
+  overflow-y: auto;        /* Ermöglicht vertikales Scrollen */
+  border: 15px solid #1e7289; /* Rand um die gesamte Seite */
+  padding: 20px; /* Abstand zum Rand für ein bisschen Freiraum */
+}
+
+.app-container {
+  display: flex;           /* Flexbox für das Layout */
+  flex-direction: column;  /* Stellt sicher, dass das Formular unter dem Logo ist */
+  align-items: flex-start; /* Das Logo und Formular werden am oberen Rand ausgerichtet */
+  justify-content: flex-start; /* Links ausrichten */
+  width: 100%;
+}
+
+.logo_aktuell {
+  margin-bottom: 20px;  /* Abstand zwischen Logo und Formular */
+  text-align: center;  /* Zentriert das Logo */
+}
+
+.logo_aktuell img {
+  width: 150px;  /* Passt die Größe des Logos an */
+  height: auto;  /* Höhe wird proportional zur Breite angepasst */
+}
+
+/* Formular-Stile */
+form {
+  width: 100%;
+  max-width: 1200px;         /* Maximale Breite des Formulars */
+  padding: 20px;            /* Weniger Padding für ein kompakteres Design */
+  background-color: white;
+  border-radius: 15px;      /* Kleinere Ecken */
+  box-shadow: 0 4px 8px rgba(208, 36, 36, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Zwei Spalten für die Felder */
+  gap: 15px;                /* Mehr Abstand zwischen den Feldern */
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;          /* Kleinere Schriftgröße für Labels */
+  color: #333;
+}
+
+input {
+  width: 100%;              /* Füllt das Eingabefeld aus */
+  padding: 10px;
+  font-size: 14px;          /* Kleinere Schriftgröße für Eingabefelder */
+  border: 1px solid #1e7289;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  border-color: #1e7289;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+  background-color: #1e7289;
+  color: rgb(23, 22, 21);
+  padding: 12px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 0;
+  width: auto;
+}
+
+button:hover {
+  background-color: #3bb5c2;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+/* Speicher- und Zurück-Buttons */
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button#saveButton, button#backButton {
+  padding: 12px 18px;
+  background-color: #1e7289;
+  color: rgb(11, 11, 11);
+}
+
+button#saveButton:hover, button#backButton:hover {
+  background-color: #3bb5c2;
+}
+
+/* Medienabfragen für responsive Anpassung */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .app-container {
+    flex-direction: column; /* Ändert das Layout auf eine vertikale Anordnung */
+    align-items: center;
+  }
+
+  form {
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .logo_aktuell img {
+    width: 100px; /* Kleinere Logo-Größe für kleine Bildschirme */
+  }
+
+  label {
+    font-size: 12px;  /* Kleinere Schriftgröße für Labels auf kleinen Geräten */
+  }
+
+  input {
+    width: 100%; /* Eingabefelder passen sich an die Bildschirmgröße an */
+  }
+
+  button {
+    width: 100%; /* Buttons nehmen die volle Breite ein */
+    font-size: 16px; /* Größere Schriftgröße für bessere Lesbarkeit */
+    padding: 12px;   /* Mehr Abstand für bessere Benutzerfreundlichkeit */
+  }
+
+  .button-group {
+    flex-direction: column; /* Buttons untereinander */
+    width: 100%;
+  }
+}

@@ -1,0 +1,84 @@
+/* Tabellenstile */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1e6b4;
+  color: #1e7289;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+table {
+  width: 100%; /* Setzt die Tabelle auf 100% der Breite des Containers */
+  border-collapse: collapse;
+  margin: 4px 0; /* Noch weniger Außenabstand */
+  background-color: #bccfd8;
+  border-radius: 10px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.1); /* Noch leichterer Schatten */
+  overflow-x: auto; /* Für horizontales Scrollen bei kleinen Bildschirmen */
+}
+
+th, td {
+  text-align: left;
+  padding: 1px 3px; /* Weiter reduziertes Padding */
+  border: 1px solid #ac2525;
+}
+
+th {
+  background-color: #1e7289;
+  color: rgb(248, 246, 246);
+  font-weight: bold;
+  font-size: 0.4rem; /* Noch kleinere Schriftgröße für die Überschrift */
+  text-transform: uppercase; /* Überschriften in Großbuchstaben */
+}
+
+td {
+  color: #333;
+  font-size: 0.55rem; /* Noch kleinere Schriftgröße */
+  font-weight: normal; /* Standard-Schriftstärke */
+}
+
+/* Container für die Tabelle */
+#tableContainer {
+  width: 40%; /* Reduziert die Breite des Containers auf 40% der Bildschirmbreite */
+  max-width: 200px; /* Maximale Breite von 200px */
+  margin: 0 auto; /* Zentriert die Tabelle */
+  padding: 2px; /* Noch reduziertes Padding um den Container */
+  overflow-x: auto; /* Ermöglicht horizontales Scrollen bei Bedarf */
+}
+
+/* Responsive Design für Tabellen */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.4rem; /* Noch kleinere Schriftgröße für Mobilgeräte */
+    width: 100%; /* Stellt sicher, dass die Tabelle die volle Breite auf kleinen Geräten nutzt */
+    table-layout: fixed; /* Sorgt dafür, dass die Zellen gleichmäßig verteilt sind */
+  }
+
+  th, td {
+    padding: 1px 2px; /* Minimaleres Padding für kleine Bildschirme */
+    text-align: center; /* Optional: Zentriert den Text in den Zellen */
+  }
+
+  #tableContainer {
+    width: 80%; /* Container auf 80% der Breite bei kleinen Bildschirmen */
+    max-width: 180px; /* Maximale Breite für kleinere Bildschirme */
+  }
+}
+
+/* Logo-Stile */
+#logoContainer {
+  display: flex;
+  justify-content: center; /* Zentriert das Logo horizontal */
+  align-items: center; /* Zentriert vertikal, falls nötig */
+  height: auto;
+  width: 100%;
+  margin-bottom: 10px; /* Abstand unter dem Logo */
+}
+
+.btn-delete {
+  color: white;

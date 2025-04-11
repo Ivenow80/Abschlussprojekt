@@ -1,0 +1,118 @@
+/* Allgemeine Stile für die Seite */
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: #c29158;
+  color: #1b1717;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container für die App */
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #9cb6a0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Überschrift */
+h1 {
+  color: #2f312c;
+  margin-bottom: 10px;
+}
+
+/* Formular-Stile */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #94793e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #868821;
+}
+
+/* QR-Code Container */
+#qr-code-container {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #c5be9b;
+  border: 1px solid #1e1313;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#qr-code-container canvas {
+  margin-top: 20px;
+}
+
+/* Status Nachricht */
+#status-message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Button für "Bereits angemeldet" */
+#status-button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#status-button:hover {
+  background-color: #004494;
+}
+
+/* Logo */
+.logo_neu img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* QR-Code Bereich */
+#qr-code {
+  margin-top: 20px;
+  text-align: center;
+}

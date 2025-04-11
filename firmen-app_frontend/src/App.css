@@ -1,0 +1,28 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.firmen-logo img {
+  margin: 20px;
+}
+
+.mitarbeiter-info {
+  margin: 20px 0;
+}
+
+#qr-code-container {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
